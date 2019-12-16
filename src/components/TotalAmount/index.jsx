@@ -17,7 +17,7 @@ class TotalAmount extends React.Component {
     };
   }
 
-  onSliderChange = value => {
+  handleOnSliderChange = value => {
     this.setState({
       value,
     });
@@ -44,7 +44,7 @@ class TotalAmount extends React.Component {
           min={5000}
           max={50000}
           value={value}
-          onChange={this.onSliderChange}
+          onChange={this.handleOnSliderChange}
           railStyle={{
             height: 2,
           }}

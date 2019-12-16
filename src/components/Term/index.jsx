@@ -17,7 +17,7 @@ class Term extends React.Component {
     };
   }
 
-  onSliderChange = value => {
+  handleOnSliderChange = value => {
     this.setState({
       value,
     });
@@ -38,7 +38,7 @@ class Term extends React.Component {
           min={3}
           max={24}
           value={value}
-          onChange={this.onSliderChange}
+          onChange={this.handleOnSliderChange}
           railStyle={{
             height: 2,
           }}
