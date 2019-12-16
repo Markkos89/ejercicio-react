@@ -1,16 +1,23 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { hot } from 'react-hot-loader';
-import HelloWorld from './components/hello-world';
+import Title from './components/Title';
+import TotalAmount from './components/TotalAmount';
+import Term from './components/Term';
+import FixedMonthlyFee from './components/FixedMonthlyFee';
 
-class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
+import style from './styles.scss';
 
-  render() {
-    return <HelloWorld title="Hello from React webpack" />;
-  }
-}
+const App = () => (
+  <>
+    <div className={style.container}>
+      <div className={style.innerContainer}>
+        <Title />
+        <TotalAmount />
+        <Term />
+        <FixedMonthlyFee />
+      </div>
+    </div>
+  </>
+);
 
 export default hot(module)(App);
